@@ -52,6 +52,7 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem 'rubocop-rails-omakase', require: false
+  gem 'faker'
 end
 
 group :development do
@@ -67,3 +68,8 @@ end
 
 gem 'sentry-rails'
 gem 'sentry-ruby'
+
+gem 'simple_form'
+gem 'slim'
+gem 'slim_lint'
+gem 'slim-rails'

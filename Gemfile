@@ -69,10 +69,10 @@ end
 gem 'sentry-rails'
 gem 'sentry-ruby'
 
+gem 'dotenv-rails'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
 gem 'simple_form'
 gem 'slim'
 gem 'slim_lint'
 gem 'slim-rails'
-gem 'dotenv-rails'

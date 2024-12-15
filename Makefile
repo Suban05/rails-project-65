@@ -16,4 +16,7 @@ lint:
 lint-fix:
 	bundle exec rubocop -A
 
+init-env:
+	touch .env
+
 .PHONY: test

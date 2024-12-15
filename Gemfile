@@ -51,8 +51,8 @@ group :development, :test do
   gem 'brakeman', require: false
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  gem 'rubocop-rails-omakase', require: false
   gem 'faker'
+  gem 'rubocop-rails-omakase', require: false
 end
 
 group :development do
@@ -69,9 +69,9 @@ end
 gem 'sentry-rails'
 gem 'sentry-ruby'
 
+gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection'
 gem 'simple_form'
 gem 'slim'
 gem 'slim_lint'
 gem 'slim-rails'
-gem 'omniauth-github'
-gem 'omniauth-rails_csrf_protection'

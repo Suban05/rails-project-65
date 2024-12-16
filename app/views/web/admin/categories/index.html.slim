@@ -1,0 +1,25 @@
+  .col-md-9
+    h1.h2.mb-4
+      = t('categories')
+    = link_to t('add_category'), new_admin_category_path
+    .row.mt-2
+      table.table.table-borderless
+        thead
+          tr
+            th
+              = t('category_id')
+            th
+              = t('category_title')
+            th
+              = t('category_action')
+        tbody
+          - @categories.each do |category|
+            tr
+              td
+                = category.id
+              td
+                = category.name
+              td
+                .d-flex.gap-2
+                = button_to t('edit'), edit_admin_category_path(category), method: :get, class: 'btn btn-primary'
+                = button_to t('remove'), admin_category_path(category), method: :delete, data: { turbo: false }, class: 'btn btn-danger'

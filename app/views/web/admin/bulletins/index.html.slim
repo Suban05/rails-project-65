@@ -1,0 +1,25 @@
+.row
+  .col-md-9
+    h1.h2.mb-4
+      = t('bulletins')
+      table.table.table-borderless
+        thead
+          tr
+            th
+              = t('bulletin_title')
+            th
+              = t('bulletin_state')
+            th
+              = t('bulletin_date')
+            th
+              = t('bulletin_action')
+        tbody
+          - @bulletins.each do |bulletin|
+            tr
+              td
+                = link_to bulletin.title, bulletin_path(bulletin)
+              td
+                = time_ago_in_words(bulletin.created_at)
+              td
+                .btn-group
+                  = button_to t('show'), bulletin_path(bulletin), method: :get, form_class: 'd-inline-block', class: 'btn btn-primary'

@@ -70,6 +70,7 @@ gem 'sentry-rails'
 gem 'sentry-ruby'
 
 gem 'dotenv-rails'
+gem 'image_processing'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
 gem 'simple_form'

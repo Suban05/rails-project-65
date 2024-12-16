@@ -1,0 +1,18 @@
+.p-4.align-items-center.border.shadow.bg-white.rounded-3
+  .row
+    .p-3.p-lg-5.pt-lg-0
+      .mb-4
+        h2
+          = @bulletin.title.capitalize
+        hr
+      .row
+        .col-8
+          - if @bulletin.image_attachment
+            = image_tag @bulletin.image.variant(resize_to_limit: [300, nil]), class: 'img-thumbnail mb-2'
+          p
+            = @bulletin.description
+        .col-4
+          .card
+            .card-body
+              h3.h5.card-title
+                = @bulletin.user.name

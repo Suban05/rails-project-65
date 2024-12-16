@@ -11,16 +11,16 @@ module AuthConcern
   end
 
   def signed_in?
-    !current_user.guest?
+    session[:user_id].present? && current_user.present?
   end
 
   def current_user
-    @current_user ||= User.active.find_by(id: session[:user_id]) || Guest.new
+    @current_user ||= User.find_by(id: session[:user_id])
   end
 
   def authenticate_user!
     return if signed_in?
 
-    redirect_to new_session_path
+    redirect_to root_path
   end
 end

@@ -81,4 +81,5 @@ gem 'slim-rails'
 
 gem 'kaminari'
 gem 'pundit', '~> 2.4'
+gem 'rails-i18n'
 gem 'ransack'

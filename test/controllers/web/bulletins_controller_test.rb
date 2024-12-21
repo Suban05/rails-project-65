@@ -105,15 +105,15 @@ class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
 
   test 'updates bulletin for author' do
     sign_in @user
-    @published.update(user: @user)
+    @drafted.update(user: @user)
 
-    patch bulletin_url(@published), params: @attrs
+    patch bulletin_url(@drafted), params: { bulletin: { title: 'New title', description: 'The best description' } }
 
     assert_redirected_to profile_url
-    @published.reload
+    @drafted.reload
 
-    assert_equal @attrs[:bulletin][:title], @published.title
-    assert_equal @attrs[:bulletin][:description], @published.description
+    assert_equal 'New title', @drafted.title
+    assert_equal 'The best description', @drafted.description
   end
 
   test 'does not move to archive for not author' do

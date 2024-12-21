@@ -1,10 +1,8 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: One
+  name: "Category 1"
 
 two:
-  name: Two
+  name: "Category 2"
 
 empty:
-  name: "Empty"
+  name: "Empty Category"

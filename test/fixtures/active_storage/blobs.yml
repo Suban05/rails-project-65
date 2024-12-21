@@ -1,0 +1,5 @@
+draft_image_blob: <%= ActiveStorage::FixtureSet.blob filename: 'bulletin1.jpg' %>
+under_moderation_image_blob: <%= ActiveStorage::FixtureSet.blob filename: 'bulletin2.jpg' %>
+published_image_blob: <%= ActiveStorage::FixtureSet.blob filename: 'bulletin3.jpg' %>
+rejected_image_blob: <%= ActiveStorage::FixtureSet.blob filename: 'bulletin4.jpg' %>
+archived_image_blob: <%= ActiveStorage::FixtureSet.blob filename: 'bulletin5.jpg' %>

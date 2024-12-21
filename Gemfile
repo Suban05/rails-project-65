@@ -51,7 +51,6 @@ group :development, :test do
   gem 'brakeman', require: false
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  gem 'faker'
   gem 'rubocop-rails-omakase', require: false
 end
 
@@ -68,7 +67,7 @@ end
 
 gem 'aasm'
 gem 'dotenv-rails'
-
+gem 'faker'
 gem 'image_processing'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'

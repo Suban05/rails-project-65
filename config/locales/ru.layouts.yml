@@ -1,0 +1,22 @@
+ru:
+  layouts:
+    web:
+      application:
+        title: Доска объявлений
+      shared:
+        nav:
+          add_bulletin: Добавить
+          admin: Админка
+          home: Главная
+          logout: Выйти       
+          my_bulletins: Мои объявления
+          sign_in: Войти
+          title: Доска объявлений
+      admin:
+        application:
+          title: Админка
+        nav:
+          under_moderation: Объявления на модерации
+          all_bulletins: Все объявления
+          users: Пользователи
+          categories: Категории

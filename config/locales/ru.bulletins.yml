@@ -1,0 +1,61 @@
+ru:
+  web:
+    admin:
+      bulletins:
+        index:
+          archive: В архив
+          archive_confirmation: Объявление будет перемещено в архив. Продолжить?
+          search_by_title_or_user_name: Поиск по названию объявления или автору
+          search_by_state: По статусу
+          title: Все объявления
+        archive:
+          failure: Объявление не может быть отправлено в архив.
+          success: Объявление отправлено в архив.
+        publish:
+          failure: Объявление не может быть опубликовано.
+          success: Объявление успешно опубликовано.
+        reject:
+          failure: Объявление не может быть возвращено автору.
+          success: Объявление успешно возвращено автору.
+      home:
+        index:
+          archive: В архив
+          archive_confirmation: Объявление будет перемещено в архив. Продолжить?
+          publish: Опубликовать
+          publish_confirmation: Объявление будет опубликовано. Продолжить?
+          reject: Вернуть
+          reject_confirmation: Объявление будет возвращено. Продолжить?
+          search_by_title_or_user_name: Поиск по названию объявления или автору
+          search_by_category: По категории
+          title: Объявления на модерации
+    bulletins:
+      cant_edit: В этом статусе объявление не может быть отредактировано
+      index:
+        search_by_title: Поиск по названию объявления
+        select_category: Укажите категорию
+        title: Объявления
+      new:
+        title: Добавить объявление
+      create:
+        success: Объявление успешно добавлено.
+      edit:
+        title: Редактирование объявления
+      update:
+        success: Объявление успешно обновлено.
+      archive:
+        failure: Объявление не может быть отправлено в архив.
+        success: Объявление отправлено в архив.
+      to_moderate:
+        failure: Объявление не может быть отправлено на модерацию.
+        success: Объявление отправлено на модерацию.
+    profile:
+      home:
+        index:
+          add: Добавить объявление
+          archive: В архив
+          archive_confirmation: После перемещения обхъявления в архив, отменить операцию будет невозможно. Вы уверены?
+          title: Мои объявления
+          to_moderate: На модерацию
+          search_by_title: Поиск по названию объявления
+          search_by_state: По статусу
+

@@ -1,0 +1,11 @@
+ru:
+  helpers:
+    submit:
+      bulletin:
+        create: Добавить объявление
+        update: Сохранить изменения
+      category:
+        create: Добавить категорию
+        update: Сохранить изменения
+      user:
+        update: Сохранить изменения

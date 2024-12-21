@@ -1,0 +1,68 @@
+ru:
+  back: Назад
+  destroy: Удалить
+  edit: Редактировать
+  reset_btn: Сбросить
+  show: Показать
+  search_by_title: "Поиск по названию"
+  search_by_state: "Поиск по статусу"
+  search_btn: "Найти"
+  all_states: "Все состояния"
+  title: "Доска объявлений"
+  main: Главная
+  my_bulletins: Мои объявления
+  add_bulletin: Добавить
+  admin_board: Админка
+  sign_out: Выйти
+  sign_in: Войти
+  new_bulletin: Новое объявление
+  add_bulletin_full: Новое объявление
+  bulletin_title: Название
+  bulletin_state: Состояние
+  bulletin_date: Дата создания
+  bulletin_action: Действия
+  on_moderation: На модерацию
+  to_archive: В архив
+  not_authorized: Вы не авторизованы для этой операции.
+  not_logged_in: Для выполнения операции необходимо войти в систему.
+  successful_login: Успешный вход в систему
+  successful_logout: "Вы успешно вышли из системы."
+  bulletins: Объявления
+  bulletins_on_moderation: "Объявления на модерации"
+  admin_action:
+      publish: "Опубликовать"
+      reject: "Отклонить"
+      archive: "Архивировать"
+  are_you_sure_archive: "Вы уверены, что хотите архивировать это объявление?"
+  categories: "Категории"
+  add_category: "Добавить категорию"
+  category_id: "ID"
+  category_title: "Название"
+  category_action: "Действие"
+  remove: "Удалить"
+  are_you_sure_remove_category: "Вы уверены, что хотите удалить эту категорию?"
+  category_created_successfully: "Категория успешно создана"
+  category_updated_successfully: "Категория успешно обновлена"
+  category_deleted_successfully: "Категория успешно удалена"
+  all_bulletins: "Все объявления"
+  all_categories: "Все категории"
+  to_moderate: "На модерацию"
+  archive: "Архивировать"
+  web:
+    admin:
+      bulletins:
+        reject:
+          error: "Ошибка при отклонении бюллетеня"
+        error: "Произошла ошибка"
+        actions:
+          to_moderate: "На модерацию"
+          to_archive: "В архив"
+        confirmations:
+          archive: "Вы уверены, что хотите отправить объявление в архив?"
+          to_moderate: "Вы уверены, что хотите отправить объявление на модерацию?"
+        to_moderate:
+          notice: "Объявление отправлено на модерацию"
+  user_not_authorized: "в Архив!"
+  notice: "Объявление отправлено на модерацию"
+  alert: "Произошла ошибка"
+  bulletins_to_moderate: "Объявления на модерации"

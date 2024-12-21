@@ -1,0 +1,37 @@
+ru:
+  activerecord:
+    attributes:
+      bulletin:
+        user: Автор
+        category: Категория
+        created_at: Добавлено
+        updated_at: Обновлено
+        description: Подробное описание
+        image: Фотография
+        state: Статус
+        state/archived: В архиве
+        state/draft: Черновик
+        state/published: Опубликовано
+        state/rejected: Возвращено
+        state/under_moderation: На модерации
+        title: Заголовок
+      category:
+        name: Наименование
+        bulletins: объявления
+      user:
+        email: email
+        name: Имя
+        admin: администратор
+    errors:
+      models:
+    models:
+      bulletin: Объявление
+  web:
+    admin:
+      bulletins:
+        on_moderation:
+          confirm:
+            reject: "Отклонено"
+            archive: "В Архив"
+  bulletins_to_moderate: ""
+

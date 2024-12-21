@@ -14,6 +14,11 @@ module Web
       end
     end
 
+    def destroy
+      sign_out
+      redirect_to root_path, notice: t('successful_logout')
+    end
+
     private
 
     def find_or_initialize_user(auth)

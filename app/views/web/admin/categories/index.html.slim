@@ -1,6 +1,9 @@
+.row
+  .col-md-3
+      = render 'web/admin/shared/nav'
   .col-md-9
     h1.h2.mb-4
-      = t('categories')
+      = t('categories').capitalize
     = link_to t('add_category'), new_admin_category_path
     .row.mt-2
       table.table.table-borderless

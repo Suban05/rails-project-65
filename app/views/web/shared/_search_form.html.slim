@@ -1,0 +1,12 @@
+= search_form_for @q, url: bulletins_path, method: :get do |f|
+  .row.my-2
+    .col-6
+      = f.search_field :title_cont, class: 'form-control'
+      small.form-text.text-muted
+        = t('search_by_title')
+    .col-3
+      = f.select :state_eq, Bulletin.aasm.states.map { |state| [state.human_name, state.name] }, { include_blank: t('all_states') }, { class: 'form-select' }
+
+    .col-3
+      = f.submit t('search_btn'), class: 'btn btn-primary me-2'
+      = link_to t('reset_btn'), bulletins_path, class: 'btn btn-outline-primary'

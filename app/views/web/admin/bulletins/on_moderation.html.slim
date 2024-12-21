@@ -1,0 +1,35 @@
+.row
+  .col-md-3
+    = render 'web/admin/shared/nav'
+  .col-md-9
+    h1.h2.mb-4
+      = t('bulletins_on_moderation').capitalize
+    .row.mt-2
+      table.table.table-borderless
+        thead
+          tr
+            th = t('bulletin_title')
+            th = t('bulletin_date')
+            th = t('bulletin_action')
+        tbody
+          - @bulletins.each do |bulletin|
+            tr
+              td
+                = link_to bulletin.title, bulletin_path(bulletin)
+              td
+                = time_ago_in_words(bulletin.created_at)
+              td.d-flex
+                = button_to t('admin_action.reject'),
+                        reject_admin_bulletin_path(bulletin),
+                        method: :patch,
+                        data: { turbo: false, turbo_confirm: t('.confirm.reject') },
+                        class: 'btn btn-warning me-2'
+
+                = button_to t('admin_action.archive'),
+                        archive_admin_bulletin_path(bulletin),
+                        method: :patch,
+                        data: { turbo: false, confirm: t('.confirm.archive') },
+                        class: 'btn btn-danger'
+
+    .row.mt-2
+      == paginate(@bulletins, remote: true)

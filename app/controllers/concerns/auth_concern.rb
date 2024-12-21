@@ -23,4 +23,10 @@ module AuthConcern
 
     redirect_to root_path
   end
+
+  def authenticate_admin!
+    return if signed_in? && current_user.admin?
+
+    redirect_to root_path, alert: t('not_authorized')
+  end
 end

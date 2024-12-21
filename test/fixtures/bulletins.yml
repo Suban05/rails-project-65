@@ -11,3 +11,24 @@ two:
   description: Second description
   user: two
   category: two
+
+published:
+  title: "Published"
+  description: "Published description"
+  category: one
+  user: one
+  state: published
+
+drafted:
+  title: "Drafted"
+  description: "Drafted description"
+  category: one
+  user: one
+  state: draft
+
+under_moderation:
+  title: "Under moderation"
+  description: "Under moderation description"
+  category: one
+  user: one
+  state: under_moderation  

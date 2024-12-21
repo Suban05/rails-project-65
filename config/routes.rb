@@ -7,13 +7,31 @@ Rails.application.routes.draw do
 
   scope module: :web do
     post 'auth/:provider', to: 'auth#request', as: :auth_request
-    get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth
+
     namespace :admin do
-      root 'bulletins#index'
-      resources :bulletins, only: %i[index]
-      resources :categories
+      root to: 'bulletins#on_moderation', filter: :under_moderation
+      resources :bulletins, only: %i[index], filter: :all do
+        member do
+          patch :publish, :archive, :reject, :to_moderate
+        end
+      end
+      resources :categories, except: %i[show]
     end
-    resources :bulletins
+
+    get 'auth/:provider/callback', to: 'auth#callback', as: :callback_auth
+    delete '/auth/logout', to: 'auth#destroy'
+    resource :profile, only: %i[show]
+
+    resources :bulletins, except: %i[destroy] do
+      member do
+        patch :to_moderate, :archive
+      end
+    end
+
+    namespace :profile do
+      resource :profiles, only: %i[show]
+    end
+
     root 'bulletins#index'
   end
 end

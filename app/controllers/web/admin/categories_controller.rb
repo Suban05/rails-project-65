@@ -4,7 +4,8 @@ class Web::Admin::CategoriesController < Web::ApplicationController
   before_action :set_category, only: %i[edit update destroy]
 
   def index
-    @categories = Category.order(name: :asc).all
+    @q = Category.order(name: :asc).ransack(params[:q])
+    @categories = @q.result
   end
 
   def new
@@ -47,6 +48,6 @@ class Web::Admin::CategoriesController < Web::ApplicationController
   end
 
   def set_category
-    @category = Category.find params[:id]
+    @category = Category.find(params[:id])
   end
 end

@@ -3,8 +3,10 @@
     .p-3.p-lg-5.pt-lg-0
       .mb-4
         h2
-          = t('title')
+          = t('title').capitalize
         hr
+      .p-3.bg-light
+        = render 'web/bulletins/search_form', url: root_path, bulletin: @q
       .row.mt-2
         - @bulletins.each do |bulletin|
             .col-3.pt-2
@@ -15,3 +17,5 @@
                   = link_to bulletin.title, bulletin_path(bulletin), class: 'card-title'
                   h6.card-subtitle.mb-2.text-muted
                     = time_ago_in_words(bulletin.created_at)
+      .row.mt-2
+        == paginate @bulletins, remote: true

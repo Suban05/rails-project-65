@@ -1,0 +1,7 @@
+- if flash.any?
+  .container.my-2
+    - flash.each do |type, msg|
+      - classes = { 'notice' => 'alert-success', 'alert' => 'alert-warning', 'error' => 'alert-danger' }
+      - alert_class = classes[type] || 'alert-secondary'
+      .alert[class=alert_class]
+        = msg

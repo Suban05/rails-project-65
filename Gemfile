@@ -66,16 +66,19 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem 'sentry-rails'
-gem 'sentry-ruby'
-
+gem 'aasm'
 gem 'dotenv-rails'
+
 gem 'image_processing'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
+gem 'sentry-rails'
+gem 'sentry-ruby'
 gem 'simple_form'
 gem 'slim'
 gem 'slim_lint'
 gem 'slim-rails'
 
+gem 'kaminari'
 gem 'pundit', '~> 2.4'
+gem 'ransack'

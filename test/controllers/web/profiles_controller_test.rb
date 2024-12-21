@@ -14,7 +14,6 @@ class Web::ProfilesControllerTest < ActionDispatch::IntegrationTest
   test 'gets index when user is logged in' do
     sign_in(@user)
     get profile_path
-
     assert_response :success
   end
 end

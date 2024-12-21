@@ -1,18 +1,20 @@
 # frozen_string_literal: true
 
 class Web::BulletinsController < Web::ApplicationController
-  before_action :authenticate_user!, only: %i[new create]
+  before_action :authenticate_user!, only: %i[new edit create update to_moderate archive]
+  before_action :set_current_user_bulletin, only: %i[show edit update to_moderate archive]
 
   def index
     @q = Bulletin.published
                  .order(updated_at: :desc)
                  .ransack(params[:q])
+
     @bulletins = @q.result.page(params[:page])
     @categories = Category.order(name: :asc)
   end
 
   def show
-    @bulletin = Bulletin.find(params[:id])
+    @bulletin = policy_scope(Bulletin).find params[:id]
   end
 
   def new
@@ -31,7 +33,7 @@ class Web::BulletinsController < Web::ApplicationController
     authorize @bulletin
 
     if @bulletin.save
-      redirect_to root_path, notice: t('.success')
+      redirect_to profile_path, notice: t('.success')
     else
       render :new, status: :unprocessable_entity
     end

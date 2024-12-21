@@ -11,8 +11,8 @@
         - @bulletins.each do |bulletin|
             .col-3.pt-2
               .card.shadow-sm
-                - if bulletin.image_attachment
-                  = image_tag bulletin.image.variant(resize_to_limit: [100, nil]), class: 'card-img-top x-object-fit-cover', style: 'height: 200px;'
+                - if bulletin.image.attached?
+                  = image_tag bulletin.image.variant(resize_to_limit: [nil, 200]), class: 'card-img-top x-object-fit-cover', height: '200'
                 .card-body
                   = link_to bulletin.title, bulletin_path(bulletin), class: 'card-title'
                   h6.card-subtitle.mb-2.text-muted

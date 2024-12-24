@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest
+class Web::BulletinsControllerTest < ActionDispatch::IntegrationTest # rubocop:disable Metrics/ClassLength
   setup do
     @published = bulletins(:published)
     @drafted = bulletins(:drafted)

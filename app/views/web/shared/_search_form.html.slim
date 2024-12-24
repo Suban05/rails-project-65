@@ -1,4 +1,4 @@
-= search_form_for @q, url: bulletins_path, method: :get do |f|
+= search_form_for @q, url:, method: :get do |f|
   .row.my-2
     .col-6
       = f.search_field :title_cont, class: 'form-control'
@@ -9,4 +9,4 @@
 
     .col-3
       = f.submit t('search_btn'), class: 'btn btn-primary me-2'
-      = link_to t('reset_btn'), bulletins_path, class: 'btn btn-outline-primary'
+      = link_to t('reset_btn'), url, class: 'btn btn-outline-primary'

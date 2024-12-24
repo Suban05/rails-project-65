@@ -66,6 +66,7 @@ group :test do
 end
 
 gem 'aasm'
+gem 'active_storage_validations'
 gem 'dotenv-rails'
 gem 'faker'
 gem 'image_processing'
